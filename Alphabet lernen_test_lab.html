@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learn the German Alphabet</title>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    h1, h2 { color: navy; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #dddddd; text-align: center; padding: 8px; }
+    audio { display: none; }
+    .letter { cursor: pointer; font-size: 24px; color: #004D99; font-weight: bold; }
+
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive and flexible grid layout */
+    gap: 10px;
+    padding: 20px;
+    }
+
+    /* Base styling for the letter icons */
+    .letter-icon {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 120px; /* Adjust based on desired size */
+        color: #fff; /* Uniform white text color for all text */
+    }
+
+    /* Gradient styles for vowels */
+    .vowel {
+        background-image: linear-gradient(to bottom right, #FFCCCC, #FF6666); /* Light red to brighter red */
+    }
+
+    /* Gradient style for consonants */
+    .consonant {
+        background-image: linear-gradient(to bottom right, #89CFF0, #007BA7); /* Light blue to teal */
+    }
+
+    /* Styling for the main letter */
+    .letter-main {
+        font-size: 24px; /* Larger font for the main letter */
+        font-weight: bold; /* Bold to highlight the main letter */
+    }
+
+    /* Styling for the transliteration */
+    .letter-text {
+        font-size: 16px; /* Appropriate for transliteration */
+        font-weight: normal; /* Default weight for easy reading */
+    }
+
+</style>
+<script>
+function playAudio(letter) {
+    var audio = document.getElementById("audio" + letter);
+    audio.play();
+}
+function playWord(word) {
+    var audio = document.getElementById(word);
+    audio.play();
+}
+</script>
+</head>
+<body>
+<h1>Welcome to the German Alphabet Learning Page!</h1>
+<p>European languages have undergone significant sound shifts throughout history. One notable event, the Great Vowel Shift, dramatically altered the pronunciation of English vowels between the 15th and 18th centuries. This shift is part of why modern English sounds so different compared to Middle English and many other European languages, which have experienced similar changes. Understanding these shifts provides invaluable insights into learning new languages like German.</p>
+
+<h2>Click on any letter to hear its pronunciation:</h2>
+<!-- Example setup for A to Z and special characters -->
+<div class="grid-container">
+    <!-- Letter A (Vowel) -->
+    <div class="letter-icon vowel" id="A" onclick="playAudio('A')">
+        <div class="letter-main">A a</div>
+        <span class="letter-text">Ah</span>
+        <audio id="audioA" src="audio_alphabet/A.wav"></audio>
+    </div>
+    <!-- Letter B (Consonant) -->
+    <div class="letter-icon consonant" id="B" onclick="playAudio('B')">
+        <div class="letter-main">B b</div>
+        <span class="letter-text">Beh</span>
+        <audio id="audioB" src="audio_alphabet/B.wav"></audio>
+    </div>
+    <!-- Letter C -->
+    <div class="letter-icon consonant" id="C" onclick="playAudio('C')">
+        <div class="letter-main">C c</div>
+        <span class="letter-text">Tseh</span>
+        <audio id="audioC" src="audio_alphabet/C.wav"></audio>
+    </div>
+    <!-- Letter D -->
+    <div class="letter-icon consonant" id="D" onclick="playAudio('D')">
+        <div class="letter-main">D d</div>
+        <span class="letter-text">Deh</span>
+        <audio id="audioD" src="audio_alphabet/D.wav"></audio>
+    </div>
+    <!-- Letter E -->
+    <div class="letter-icon vowel" id="E" onclick="playAudio('E')">
+        <div class="letter-main">E e</div>
+        <span class="letter-text">Eh</span>
+        <audio id="audioE" src="audio_alphabet/E.wav"></audio>
+    </div>
+    <!-- Letter F -->
+    <div class="letter-icon consonant" id="F" onclick="playAudio('F')">
+        <div class="letter-main">F f</div>
+        <span class="letter-text">Eff</span>
+        <audio id="audioF" src="audio_alphabet/F.wav"></audio>
+    </div>
+    <!-- Letter G -->
+    <div class="letter-icon consonant" id="G" onclick="playAudio('G')">
+        <div class="letter-main">G g</div>
+        <span class="letter-text">Geh</span>
+        <audio id="audioG" src="audio_alphabet/G.wav"></audio>
+    </div>
+    <!-- Letter H -->
+    <div class="letter-icon consonant" id="H" onclick="playAudio('H')">
+        <div class="letter-main">H h</div>
+        <span class="letter-text">Hah</span>
+        <audio id="audioH" src="audio_alphabet/H.wav"></audio>
+    </div>
+    <!-- Letter I -->
+    <div class="letter-icon vowel" id="I" onclick="playAudio('I')">
+        <div class="letter-main">I i</div>
+        <span class="letter-text">Eeh</span>
+        <audio id="audioI" src="audio_alphabet/I.wav"></audio>
+    </div>
+    <!-- Letter J -->
+    <div class="letter-icon consonant" id="J" onclick="playAudio('J')">
+        <div class="letter-main">J j</div>
+        <span class="letter-text">Yot</span>
+        <audio id="audioJ" src="audio_alphabet/J.wav"></audio>
+    </div>
+    <!-- Letter K -->
+    <div class="letter-icon consonant" id="K" onclick="playAudio('K')">
+        <div class="letter-main">K k</div>
+        <span class="letter-text">Kah</span>
+        <audio id="audioK" src="audio_alphabet/K.wav"></audio>
+    </div>
+    <!-- Letter L -->
+    <div class="letter-icon consonant" id="L" onclick="playAudio('L')">
+        <div class="letter-main">L l</div>
+        <span class="letter-text">Ell</span>
+        <audio id="audioL" src="audio_alphabet/L.wav"></audio>
+    </div>
+    <!-- Letter M -->
+    <div class="letter-icon consonant" id="M" onclick="playAudio('M')">
+        <div class="letter-main">M m</div>
+        <span class="letter-text">Emm</span>
+        <audio id="audioM" src="audio_alphabet/M.wav"></audio>
+    </div>
+    <!-- Letter N -->
+    <div class="letter-icon consonant" id="N" onclick="playAudio('N')">
+        <div class="letter-main">N n</div>
+        <span class="letter-text">Enn</span>
+        <audio id="audioN" src="audio_alphabet/N.wav"></audio>
+    </div>
+    <!-- Letter O -->
+    <div class="letter-icon vowel" id="O" onclick="playAudio('O')">
+        <div class="letter-main">O o</div>
+        <span class="letter-text">Oh</span>
+        <audio id="audioO" src="audio_alphabet/O.wav"></audio>
+    </div>
+    <!-- Letter P -->
+    <div class="letter-icon consonant" id="P" onclick="playAudio('P')">
+        <div class="letter-main">P p</div>
+        <span class="letter-text">Peh</span>
+        <audio id="audioP" src="audio_alphabet/P.wav"></audio>
+    </div>
+    <!-- Letter Q -->
+    <div class="letter-icon consonant" id="Q" onclick="playAudio('Q')">
+        <div class="letter-main">Q q</div>
+        <span class="letter-text">Kuh</span>
+        <audio id="audioQ" src="audio_alphabet/Q.wav"></audio>
+    </div>
+    <!-- Letter R -->
+    <div class="letter-icon consonant" id="R" onclick="playAudio('R')">
+        <div class="letter-main">R r</div>
+        <span the="letter-text">Err</span>
+        <audio id="audioR" src="audio_alphabet/R.wav"></audio>
+    </div>
+    <!-- Letter S -->
+    <div class="letter-icon consonant" id="S" onclick="playAudio('S')">
+        <div class="letter-main">S s</div>
+        <span class="letter-text">Ess</span>
+        <audio id="audioS" src="audio_alphabet/S.wav"></audio>
+    </div>
+    <!-- Letter T -->
+    <div class="letter-icon consonant" id="T" onclick="playAudio('T')">
+        <div class="letter-main">T t</div>
+        <span class="letter-text">Teh</span>
+        <audio id="audioT" src="audio_alphabet/T.wav"></audio>
+    </div>
+    <!-- Letter U -->
+    <div class="letter-icon vowel" id="U" onclick="playAudio('U')">
+        <div class="letter-main">U u</div>
+        <span class="letter-text">Ooh</span>
+        <audio id="audioU" src="audio_alphabet/U.wav"></audio>
+    </div>
+    <!-- Letter V -->
+    <div class="letter-icon consonant" id="V" onclick="playAudio('V')">
+        <div class="letter-main">V v</div>
+        <span the="letter-text">Fau</span>
+        <audio id="audioV" src="audio_alphabet/V.wav"></audio>
+    </div>
+    <!-- Letter W -->
+    <div class="letter-icon consonant" id="W" onclick="playAudio('W')">
+        <div class="letter-main">W w</div>
+        <span the="letter-text">Weh</span>
+        <audio id="audioW" src="audio_alphabet/W.wav"></audio>
+    </div>
+    <!-- Letter X -->
+    <div class="letter-icon consonant" id="X" onclick="playAudio('X')">
+        <div class="letter-main">X x</div>
+        <span class="letter-text">Iks</span>
+        <audio id="audioX" src="audio_alphabet/X.wav"></audio>
+    </div>
+    <!-- Letter Y -->
+    <div class="letter-icon vowel" id="Y" onclick="playAudio('Y')">
+        <div class="letter-main">Y y</div>
+        <span class="letter-text">Üpsilon</span>
+        <audio id="audioY" src="audio_alphabet/Y.wav"></audio>
+    </div>
+    <!-- Letter Z -->
+    <div class="letter-icon consonant" id="Z" onclick="playAudio('Z')">
+        <div class="letter-main">Z z</div>
+        <span the="letter-text">Tsett</span>
+        <Waudio id="audioZ" src="audio_alphabet/Z.wav"></audio>
+    </div>
+    <!-- Special Characters -->
+    <!-- Ä -->
+    <div class="letter-icon vowel" id="Ae" onclick="playAudio('Ae')">
+        <div class="letter-main">Ä ä</div>
+        <span class="letter-text">Aeh</span>
+        <audio id="audioAe" src="audio_alphabet/Ä.wav"></audio>
+    </div>
+    <!-- Ö -->
+    <div class="letter-icon vowel" id="Oe" onclick="playAudio('Oe')">
+        <div class="letter-main">Ö ö</div>
+        <span the="letter-text">Oeh</span>
+        <audio id="audioOe" src="audio_alphabet/Ö.wav"></audio>
+    </div>
+    <!-- Ü -->
+    <div class="letter-icon vowel" id="Ue" onclick="playAudio('Ue')">
+        <div class="letter-main">Ü ü</div>
+        <span the="letter-text">Ueh</span>
+        <audio id="audioUe" src="audio_alphabet/Ü.wav"></audio>
+    </div>
+    <!-- ß -->
+    <div class="letter-icon consonant" id="Ss" onclick="playAudio('Ss')">
+        <div class="letter-main">ß</div>
+        <span the="letter-text">Eszett</span>
+        <audio id="audioSs" src="audio_alphabet/ß.wav"></audio>
+    </div>
+    <!-- Sch -->
+    <div class="letter-icon consonant" id="Sch" onclick="playAudio('Sch')">
+        <div class="letter-main">Sch</div>
+        <span the="letter-text">Sch</span>
+        <audio id="audioSch" src="audio_alphabet/Sch.wav"></audio>
+    </div>
+    <!-- Ch -->
+    <div class="letter-icon consonant" id="Ch" onclick="playAudio('Ch')">
+        <div class="letter-main">Ch</div>
+        <span the="letter-text">Ch</span>
+        <audio id="audioCh" src="audio_alphabet/CH.wav"></audio>
+    </div>
+</div>
+
+
+<h2>Detailed Pronunciation Guide</h2>
+<p>The German alphabet contains several sounds that do not have direct equivalents in English. Here's how to pronounce some of the trickier ones:</p>
+<ul>
+    <li><strong>ä</strong> - Pronounced similar to the 'a' in 'care'. German examples include 
+        <img onclick="playWord('audio_Käse')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Käse" style="display: none;">
+         <source src="audio_alphabet/Käse.wav" type="audio/wav"/>
+        </audio>
+        'Käse' (cheese).</li>
+    <li><strong>ch</strong> - Two sounds depending on the letter context:
+        <ul>
+            <li>After 'a', 'o', 'u', 'au': Pronounced like 'Bach' or Scottish 'loch'. Example: 'Buch' (book).</li>
+            <li>After 'e', 'i', 'ä', 'ö', 'ü': A soft hiss, similar to the 'h' in 'huge'. Example: 'Ich' (I).</li>
+        </ul>
+    </li>
+    <li><strong>e</strong> - Has two main sounds:
+        <ul>
+            <li>Short 'e': Similar to the 'e' in 'bet'. Example: 'Bett' (bed).</li>
+            <li>Long 'e': Similar to the 'ay' in 'pay', but without the glide. Example: 'See' (lake).</li>
+        </ul>
+    </li>
+    <li><strong>ö</strong> - No direct English equivalent, but similar to the 'i' in 'bird' with rounded lips. Other languages: similar to French 'eu' in 'peur'. Example: 'Öl' (oil).</li>
+    <li><strong>sch</strong> - Pronounced like the English 'sh' in 'ship'. Example: 'Schule' (school).</li>
+    <li><strong>ß</strong> (Eszett or sharp S) - Represents a double 's' sound, pronounced as 's' in 'rose'. Example: 'Straße' (street).</li>
+    <li><strong>v</strong> - Usually pronounced as 'f' in 'fish'. Example: 'Vogel' (bird).</li>
+    <li><strong>w</strong> - Pronounced like the 'v' in 'vase'. Example: 'Wasser' (water).</li>
+    <li><strong>z</strong> - Pronounced as 'ts' in 'bits'. Example: 'Zug' (train).</li>
+    <li><strong>ü</strong> - No direct English equivalent; imagine saying 'ee' as in 'see', with lips rounded as for 'oo' in 'food'. Other languages: similar to French 'u' in 'rue'. Example: 'Müde' (tired).</li>
+</ul>
+
+
+
+</body>
+</html>
