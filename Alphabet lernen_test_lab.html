@@ -174,7 +174,7 @@ function playWord(word) {
     <!-- Letter Q -->
     <div class="letter-icon consonant" id="Q" onclick="playAudio('Q')">
         <div class="letter-main">Q q</div>
-        <span class="letter-text">Kuh</span>
+        <span class="letter-text">Koo</span>
         <audio id="audioQ" src="audio_alphabet/Q.wav"></audio>
     </div>
     <!-- Letter R -->
@@ -204,13 +204,13 @@ function playWord(word) {
     <!-- Letter V -->
     <div class="letter-icon consonant" id="V" onclick="playAudio('V')">
         <div class="letter-main">V v</div>
-        <span the="letter-text">Fau</span>
+        <span the="letter-text">Fow</span>
         <audio id="audioV" src="audio_alphabet/V.wav"></audio>
     </div>
     <!-- Letter W -->
     <div class="letter-icon consonant" id="W" onclick="playAudio('W')">
         <div class="letter-main">W w</div>
-        <span the="letter-text">Weh</span>
+        <span the="letter-text">Veh</span>
         <audio id="audioW" src="audio_alphabet/W.wav"></audio>
     </div>
     <!-- Letter X -->
@@ -222,7 +222,7 @@ function playWord(word) {
     <!-- Letter Y -->
     <div class="letter-icon vowel" id="Y" onclick="playAudio('Y')">
         <div class="letter-main">Y y</div>
-        <span class="letter-text">Üpsilon</span>
+        <span class="letter-text">Uepsilon</span>
         <audio id="audioY" src="audio_alphabet/Y.wav"></audio>
     </div>
     <!-- Letter Z -->
@@ -253,19 +253,19 @@ function playWord(word) {
     <!-- ß -->
     <div class="letter-icon consonant" id="Ss" onclick="playAudio('Ss')">
         <div class="letter-main">ß</div>
-        <span the="letter-text">Eszett</span>
+        <span the="letter-text">Ess-tsett</span>
         <audio id="audioSs" src="audio_alphabet/ß.wav"></audio>
     </div>
     <!-- Sch -->
     <div class="letter-icon consonant" id="Sch" onclick="playAudio('Sch')">
         <div class="letter-main">Sch</div>
-        <span the="letter-text">Sch</span>
+        <span the="letter-text">Sh</span>
         <audio id="audioSch" src="audio_alphabet/Sch.wav"></audio>
     </div>
     <!-- Ch -->
     <div class="letter-icon consonant" id="Ch" onclick="playAudio('Ch')">
         <div class="letter-main">Ch</div>
-        <span the="letter-text">Ch</span>
+        <span the="letter-text">Kh / Sh</span>
         <audio id="audioCh" src="audio_alphabet/CH.wav"></audio>
     </div>
 </div>
@@ -282,23 +282,78 @@ function playWord(word) {
         'Käse' (cheese).</li>
     <li><strong>ch</strong> - Two sounds depending on the letter context:
         <ul>
-            <li>After 'a', 'o', 'u', 'au': Pronounced like 'Bach' or Scottish 'loch'. Example: 'Buch' (book).</li>
-            <li>After 'e', 'i', 'ä', 'ö', 'ü': A soft hiss, similar to the 'h' in 'huge'. Example: 'Ich' (I).</li>
+            <li>After 'a', 'o', 'u', 'au': Pronounced like 'Bach' or Scottish 'loch'. Example: 
+                <img onclick="playWord('audio_Buch')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+                <audio id="audio_Buch" style="display: none;">
+                <source src="audio_alphabet/Buch.wav" type="audio/wav"/>
+                </audio>
+                'Buch' (book).</li>
+            <li>After 'e', 'i', 'ä', 'ö', 'ü': A soft hiss, similar to the 'h' in 'huge'. Example: 
+                <img onclick="playWord('audio_ich')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+                <audio id="audio_ich" style="display: none;">
+                 <source src="audio_alphabet/ich.wav" type="audio/wav"/>
+                </audio>
+                'ich' (I).</li>
         </ul>
     </li>
     <li><strong>e</strong> - Has two main sounds:
         <ul>
-            <li>Short 'e': Similar to the 'e' in 'bet'. Example: 'Bett' (bed).</li>
-            <li>Long 'e': Similar to the 'ay' in 'pay', but without the glide. Example: 'See' (lake).</li>
+            <li>Short 'e': Similar to the 'e' in 'bet'. Example: 
+                <img onclick="playWord('audio_Bett')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+                <audio id="audio_Bett" style="display: none;">
+                <source src="audio_alphabet/Bett.wav" type="audio/wav"/>
+                </audio>
+                'Bett' (bed).</li>
+            <li>Long 'e': Similar to the 'ay' in 'pay', but without the glide. Example: 
+                <img onclick="playWord('audio_See')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+                <audio id="audio_See" style="display: none;">
+                <source src="audio_alphabet/See.wav" type="audio/wav"/>
+                </audio>
+                'See' (lake).</li>
         </ul>
     </li>
-    <li><strong>ö</strong> - No direct English equivalent, but similar to the 'i' in 'bird' with rounded lips. Other languages: similar to French 'eu' in 'peur'. Example: 'Öl' (oil).</li>
-    <li><strong>sch</strong> - Pronounced like the English 'sh' in 'ship'. Example: 'Schule' (school).</li>
-    <li><strong>ß</strong> (Eszett or sharp S) - Represents a double 's' sound, pronounced as 's' in 'rose'. Example: 'Straße' (street).</li>
-    <li><strong>v</strong> - Usually pronounced as 'f' in 'fish'. Example: 'Vogel' (bird).</li>
-    <li><strong>w</strong> - Pronounced like the 'v' in 'vase'. Example: 'Wasser' (water).</li>
-    <li><strong>z</strong> - Pronounced as 'ts' in 'bits'. Example: 'Zug' (train).</li>
-    <li><strong>ü</strong> - No direct English equivalent; imagine saying 'ee' as in 'see', with lips rounded as for 'oo' in 'food'. Other languages: similar to French 'u' in 'rue'. Example: 'Müde' (tired).</li>
+    <li><strong>ö</strong> - No direct English equivalent, but similar to the 'i' in 'bird' with rounded lips. Other languages: similar to French 'eu' in 'peur'. Example: '
+        <img onclick="playWord('audio_Öl')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Öl" style="display: none;">
+        <source src="audio_alphabet/Öl.wav" type="audio/wav"/>
+        </audio>
+        Öl' (oil).</li>
+    <li><strong>sch</strong> - Pronounced like the English 'sh' in 'ship'. Example: 
+        <img onclick="playWord('audio_Schule')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Schule" style="display: none;">
+        <source src="audio_alphabet/Schule.wav" type="audio/wav"/>
+        </audio>
+        'Schule' (school).</li>
+    <li><strong>ß</strong> (Eszett or sharp S) - Represents a double 's' sound, pronounced as 's' in 'rose'. Example: 
+        <img onclick="playWord('audio_Straße')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Straße" style="display: none;">
+        <source src="audio_alphabet/Straße.wav" type="audio/wav"/>
+        </audio>
+        'Straße' (street).</li>
+    <li><strong>v</strong> - Usually pronounced as 'f' in 'fish'. Example: 
+        <img onclick="playWord('audio_Vogel')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Vogel" style="display: none;">
+        <source src="audio_alphabet/Vogel.wav" type="audio/wav"/>
+        </audio>
+        'Vogel' (bird).</li>
+    <li><strong>w</strong> - Pronounced like the 'v' in 'vase'. Example: 
+        <img onclick="playWord('audio_Wasser')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Wasser" style="display: none;">
+        <source src="audio_alphabet/Wasser.wav" type="audio/wav"/>
+        </audio>
+        'Wasser' (water).</li>
+    <li><strong>z</strong> - Pronounced as 'ts' in 'bits'. Example: 
+        <img onclick="playWord('audio_Zug')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Zug" style="display: none;">
+        <source src="audio_alphabet/Zug.wav" type="audio/wav"/>
+        </audio>
+        'Zug' (train).</li>
+    <li><strong>ü</strong> - No direct English equivalent; imagine saying 'ee' as in 'see', with lips rounded as for 'oo' in 'food'. Other languages: similar to French 'u' in 'rue'. Example: 
+        <img onclick="playWord('audio_Müde')" src="Vocabulary%20with%20icons_files/image003.png" style="cursor:pointer; display: inline; vertical-align: middle;"/>
+        <audio id="audio_Müde" style="display: none;">
+        <source src="audio_alphabet/müde.wav" type="audio/wav"/>
+        </audio>
+        'müde' (tired).</li>
 </ul>
 
 
